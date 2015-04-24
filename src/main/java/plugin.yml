@@ -1,0 +1,28 @@
+name: DwarfBorder
+main: com.ntcreations.DwarfBorder.DwarfBorder
+version: 0.1.0
+    
+commands:
+   DB:
+    description: Version check and reload.
+    usage: "usage: /<command>"
+    permission: DwarfBorder.DB
+    permission-message: You don't have <permission>
+   border:
+    description: Border commands.
+    usage: "usage: /<command>"
+    permission: DwarfBorder.border
+    permission-message: You don't have <permission>
+    
+    
+permissions:
+    DwarfBorder.*:
+        description: Gives access to all commands
+        children:
+            DwarfBorder.DB: true
+            DwarfBorder.border: true
+    DwarfBorder.DB:
+        description: Version check and reload
+        default: true
+    DwarfBorder.border:
+        description: Border commands
